@@ -7,8 +7,11 @@
 
 {% block content %}
 <main class="main index-main">
-    
-</main>
+    {% for mirror in object_list %}
+        {{ mirror.title }} {{ mirror.price }}
+        <img src="{{ mirror.image.url }}" />
+    {% endfor %}
+</main> 
 {% endblock %}
 
 {% block js_block %}
