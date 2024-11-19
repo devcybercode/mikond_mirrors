@@ -1,0 +1,7 @@
+$text-white: #FFFFFF;
+$text-black: #000;
+
+:root {
+    --text-white: #{$text-white};
+    --text-black: #{$text-black};
+}

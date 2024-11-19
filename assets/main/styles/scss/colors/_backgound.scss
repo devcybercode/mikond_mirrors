@@ -1,0 +1,6 @@
+$body-background: #f3f3f3;
+$error-background: #E57373;
+:root {
+    --body-background: #{$body-background};
+    --error-background: #{$error-background};
+}

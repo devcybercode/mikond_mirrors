@@ -1,0 +1,8 @@
+// @import 'fontFile'
+
+$font: 'Font name';
+
+:root {
+    --font: #{$font} !important;
+}
+
