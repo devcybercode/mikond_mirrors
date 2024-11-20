@@ -7,10 +7,25 @@
 
 {% block content %}
 <main class="main index-main">
-    {% for mirror in object_list %}
-        {{ mirror.title }} {{ mirror.price }}
-        <img src="{{ mirror.image.url }}" />
-    {% endfor %}
+    <div class="home">
+        <ul class="card-list">
+          {% for mirror in object_list %}
+          <li>
+            <div class="card-mirror">
+                <h3 class="card-title">{{ mirror.title }}</h3>
+                <div class="card-img-wrapper">
+                    <img 
+                        class="card-image"
+                        src="{{ mirror.image.url }}"
+                        alt="Mirror Card image"
+                    />
+                </div>
+                <span class="card-price">${{ mirror.price }}</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+    </div>
 </main> 
 {% endblock %}
 
