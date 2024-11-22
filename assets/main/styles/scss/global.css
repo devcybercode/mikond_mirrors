@@ -12,9 +12,10 @@
 
 .home {
   display: flex;
+  flex-flow: column;
   justify-content: center;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem calc(50% - 25rem);
   font-family: "Golos Text", sans-serif;
 }
 @media screen and (max-width: 360px) {
@@ -23,10 +24,15 @@
   }
 }
 
+.home-title {
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 2rem;
   transition: all 300ms;
 }
@@ -48,10 +54,7 @@
   justify-content: center;
   align-items: center;
   width: 15rem;
-  background: rgb(240, 240, 240);
-  padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 0 0 5px rgb(133, 133, 133);
 }
 .card-mirror--large {
   width: 20rem;
@@ -62,28 +65,23 @@
     padding: 0.5rem;
   }
 }
-.card-mirror:hover .card-img-wrapper {
+.card-mirror:hover .card-img-wrapper > img {
   opacity: 0.95;
   scale: 0.97;
 }
-.card-mirror:hover .card-price {
-  background: white;
-  color: black;
-}
 
 .card-title {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: bold;
   color: black;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .card-price {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
-  background: rgb(67, 67, 67);
-  color: white;
+  color: black;
   min-width: 7rem;
   text-align: center;
   border-radius: 0.25rem;
@@ -92,9 +90,10 @@
 
 .card-img-wrapper {
   display: flex;
-  height: 15rem;
-  transition: all 300ms;
+  height: 18rem;
   margin-bottom: 1rem;
+  background: rgb(240, 240, 240);
+  border-radius: 0.5rem;
 }
 @media screen and (max-width: 790px) {
   .card-img-wrapper {
@@ -108,12 +107,76 @@ img.card-image {
   width: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
+  transition: all 300ms;
 }
 @media screen and (max-width: 790px) {
   img.card-image {
     min-width: 100%;
     max-width: 25rem;
   }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem calc(50% - 25rem);
+  padding-top: 1rem;
+  font-family: "Golos Text", sans-serif;
+}
+.header a {
+  color: black;
+}
+@media screen and (max-width: 700px) {
+  .header {
+    padding-inline: 1rem;
+  }
+}
+
+.logo {
+  position: relative;
+  display: block;
+  width: 5rem;
+  height: auto;
+}
+.logo:hover {
+  opacity: 0.75;
+}
+
+.logo__img {
+  width: 100%;
+  height: auto;
+}
+
+.logo__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav__link--active {
+  text-decoration: underline;
+}
+.nav__link:hover {
+  color: grey;
+}
+.nav__link:hover--active {
+  text-decoration: underline;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column;
 }
 
 :root {

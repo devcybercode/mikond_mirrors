@@ -8,11 +8,11 @@
 {% block content %}
 <main class="main index-main">
     <div class="home">
+        <h1 class="home-title">Каталог</h1>
         <ul class="card-list">
           {% for mirror in object_list %}
           <li>
             <div class="card-mirror">
-                <h3 class="card-title">{{ mirror.title }}</h3>
                 <div class="card-img-wrapper">
                     <img 
                         class="card-image"
@@ -20,7 +20,9 @@
                         alt="Mirror Card image"
                     />
                 </div>
+                <h3 class="card-title">{{ mirror.title }}</h3>
                 <span class="card-price">${{ mirror.price }}</span>
+                <a class="card-call" href="tel:+998952134322"></a>
             </div>
           </li>
           {% endfor %}
