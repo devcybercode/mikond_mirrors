@@ -66,7 +66,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mirrors',
         'USER': 'postgres',
-        'PASSWORD': 'Zukhriddin12',
+        'PASSWORD': 'dimatop12',
         'HOST': 'localhost',
         'PORT': '5432'
     }
