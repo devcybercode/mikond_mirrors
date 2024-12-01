@@ -9,6 +9,7 @@ class UserModel(AbstractUser):
 class SocialContact(models.Model):
     instagram = models.URLField()
     telegram = models.URLField()
+    logo = models.ImageField(upload_to='logo/%Y/%m/%d/', default="none")
     phone_number = models.CharField(
         max_length=15,  # Adjust based on your region's phone number format
         validators=[
