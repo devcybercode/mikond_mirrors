@@ -11,7 +11,7 @@
         <h1 class="home-title">Каталог</h1>
         <ul class="card-list">
           {% for mirror in object_list %}
-          <li>
+          <li class="card-column">
             <div class="card-mirror">
                 <div class="card-img-wrapper">
                     <img 
@@ -21,12 +21,17 @@
                     />
                 </div>
                 <h3 class="card-title">{{ mirror.title }}</h3>
-                <span class="card-price">${{ mirror.price }}</span>
-                <a class="card-call" href="tel:+998952134322"></a>
+                <span class="card-price">{{ mirror.price }} сўм</span>
+                {% for contact in social_contacts %}
+                    {% if contact.phone_number %}
+                        <a href="tel:{{ contact.phone_number }}" class="home-contact-button">Заказать</a>
+                    {% endif %}
+                {% endfor %}
             </div>
           </li>
           {% endfor %}
         </ul>
+
     </div>
 </main> 
 {% endblock %}

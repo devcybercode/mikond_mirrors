@@ -1,24 +1,57 @@
 .header {
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  padding: 2rem calc(50% - 25rem);
-  padding-top: 1rem;
+  align-items: center;
+  padding: 0rem calc(50% - 25rem);
   font-family: "Golos Text", sans-serif;
-
-  a {
-    color: black;
-  }
+  top: 0;
+  background: white;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5);
+  width: 100%;
+  z-index: 100;
+  padding-top: 0.25rem;
 
   @media screen and (max-width: 700px) {
     padding-inline: 1rem;
   }
 }
 
+.header-contact-button,
+.home-contact-button {
+  color: white;
+  padding: 0.5rem 1rem;
+  background: #23554A;
+  font-size: 0.9rem;
+  width: max-content;
+  border: 0.1rem solid #23554A;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: transparent;
+    color: #23554A;
+  }
+}
+
+.contact-social-networks {
+  display: flex;
+  gap: 0.5rem;
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.header-social-icon-link {
+  color: #23554A;
+}
+
+.home-contact-button {
+  margin: 2rem auto 1rem;
+}
+
 .logo {
   position: relative;
   display: block;
-  width: 5rem;
-  height: auto;
 
   &:hover {
     opacity: 0.75;
@@ -26,8 +59,9 @@
 }
 
 .logo__img {
-  width: 100%;
-  height: auto;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
 }
 
 .logo__link {
@@ -36,6 +70,7 @@
   top: 0;
   width: 100%;
   height: 100%;
+  font-size: 0;
 }
 
 .nav {
