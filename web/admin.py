@@ -2,7 +2,8 @@ from django.contrib import admin
 from .models import (
     UserModel, 
     SocialContact,
-    mirrors
+    mirrors,
+    Contact
 )
 from django.utils.translation import gettext_lazy as _
 from django.utils.safestring import mark_safe
@@ -15,7 +16,7 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ['username']
     
 @admin.register(SocialContact)
-class UserAdmin(admin.ModelAdmin):
+class SocialAdmin(admin.ModelAdmin):
     list_display = ['id', 'instagram', 'telegram']
     list_display_links = ['id', 'instagram', 'telegram']
     search_fields = ['instagram', 'telegram']
@@ -26,3 +27,8 @@ class MirrorsAdmin(admin.ModelAdmin):
     list_display = ['id', 'title']
     list_display_links = ['id', 'title']
     search_fields = ['title']
+    
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'phone', 'created_at')
+    search_fields = ('name', 'phone')

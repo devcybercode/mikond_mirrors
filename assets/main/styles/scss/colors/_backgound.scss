@@ -1,6 +1,13 @@
 $body-background: #f3f3f3;
-$error-background: #E57373;
+$error-background: rgb(254 226 226 / 1);
+$error-color: rgb(220 38 38 / 1);
+$success-background: #DCFCE7;
+$success-color: #15803D;
+
 :root {
     --body-background: #{$body-background};
     --error-background: #{$error-background};
+    --error-color: #{$error-color};
+    --success-background: #{$success-background};
+    --success-color: #{$success-color};
 }

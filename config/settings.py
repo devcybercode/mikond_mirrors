@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-f$g05fz^h%+x%t0**6iq1@p1spnjgd$_9!f@puv%h_qa#$cj_g'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -65,7 +65,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mirrors',
-        'USER': 'root',
+        'USER': 'postgres',
         'PASSWORD': 'dimatop12',
         'HOST': 'localhost',
         'PORT': '5432'

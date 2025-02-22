@@ -1,30 +1,32 @@
 {% load static i18n %}
 <header class="header" id="header">
-  {% for contact in social_contacts %}
-  <div class="logo">
-    <img
-      class="logo__img"
-      src="{{ contact.logo.url }}"
-      alt="Site Logo"
-    />
-    <a class="logo__link" href="#">Logo</a>
-  </div>
-  <div class="contact-social-networks">
-    {% if contact.instagram %}
-      <a href="{{ contact.instagram }}" target="_blank" class="header-social-icon-link">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    {% endif %}
-    {% if contact.telegram %}
-      <a href="{{ contact.telegram }}" target="_blank" class="header-social-icon-link">
-        <i class="fa-brands fa-telegram"></i>
-      </a>
-    {% endif %}
-  </div>
-  <div class="contact">
-    {% if contact.phone_number %}
-      <a href="tel:{{ contact.phone_number }}" class="header-contact-button">Позвонить</a>
-    {% endif %}
-  </div>
-  {% endfor %}
+  <nav class="header-nav">
+    {% for contact in social_contacts %}
+    <div class="logo">
+      <img
+        class="logo__img"
+        src="{{ contact.logo.url }}"
+        alt="Site Logo"
+      />
+      <a class="logo__link" href="#">Logo</a>
+    </div>
+    <div class="contact-social-networks">
+      {% if contact.instagram %}
+        <a href="{{ contact.instagram }}" target="_blank" class="header-social-icon-link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      {% endif %}
+      {% if contact.telegram %}
+        <a href="{{ contact.telegram }}" target="_blank" class="header-social-icon-link">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      {% endif %}
+    </div>
+    <div class="contact">
+      {% if contact.phone_number %}
+        <a href="tel:{{ contact.phone_number }}" class="header-contact-button">Позвонить</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </nav>
 </header>

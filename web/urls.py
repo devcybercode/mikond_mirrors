@@ -8,8 +8,5 @@ from .views import (
 app_name = "main"
 
 urlpatterns = [
-    # path('set-language/', set_language, name='set_language'),
-    
-    # Main Page
     path('', index.as_view(), name="index"),
 ]
