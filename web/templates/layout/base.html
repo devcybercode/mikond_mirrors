@@ -27,7 +27,9 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"> -->
     <!-- Animation End -->
     <title>{% block title %}{% endblock %}</title>
+</head>
 
+<body>
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -44,13 +46,9 @@
         fbq('init', '1163639231965901');
         fbq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1163639231965901&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Meta Pixel Code -->
-</head>
-
-<body>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1163639231965901&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->ы
 
     {% include 'layout/header.html' %}
 
