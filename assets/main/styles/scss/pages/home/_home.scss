@@ -194,18 +194,44 @@ img.card-image {
 
   .contact-button {
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     background: #23554A;
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 100%;
     border: 0.1rem solid #23554A;
     transition: all 0.3s ease;
     margin-top: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 
     &:hover {
       background: transparent;
       color: #23554A;
     }
   }
+}
+
+
+select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  color: #222;
+  background-color: #fff;
+  border: 0.1rem solid #23554A;
+  border-radius: 0.5rem;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%2323554A' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+select:focus {
+  border-color: #23554A;
+  box-shadow: 0 0 0 0.2rem rgba(35,85,74,0.25);
 }
