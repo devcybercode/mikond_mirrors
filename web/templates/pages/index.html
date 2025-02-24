@@ -26,7 +26,7 @@
             {% endfor %}
         </ul>
 
-        
+
 
         <section class="contact-apply">
             <div class="form-message" id="form-message"></div>
@@ -51,6 +51,15 @@
                     </div>
                     {% endif %}
                 </div>
+                <div class="form-group">
+                    <label for="{{ form.phone.id_for_label }}">Модель зеркалы</label>
+                    {{ form.model }}
+                    {% if form.model.errors %}
+                    <div class="error">
+                        {{ form.model.errors }}
+                    </div>
+                    {% endif %}
+                </div>
                 <button class="contact-button" type="submit">Отправить</button>
             </form>
         </section>
@@ -63,15 +72,20 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector('.contact-apply form');
+        // Extract the CSRF token from the form
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
         if (form) {
             form.addEventListener('submit', function (e) {
-                e.preventDefault();  
+                e.preventDefault();
                 const formData = new FormData(form);
                 fetch(form.action, {
                     method: 'POST',
                     headers: {
-                        'X-Requested-With': 'XMLHttpRequest'
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': csrftoken
                     },
+                    credentials: 'same-origin', // ensures cookies are sent
                     body: formData
                 })
                     .then(response => {
@@ -154,5 +168,6 @@
         const digits = phone.replace(/\D/g, "");
         return digits.startsWith("998") ? digits.slice(3) : digits;
     }
+
 </script>
 {% endblock %}

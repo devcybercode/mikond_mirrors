@@ -56,6 +56,7 @@ class Contact(models.Model):
         validators=[phone_validator],
         help_text="Формат номера: +998 (__) ___ __ __"
     )
+    model = models.ForeignKey(mirrors, on_delete=models.CASCADE, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

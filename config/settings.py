@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     
     'fontawesomefree',
 
-    'web'
+    "web.apps.WebConfig",
 
 ]
 
@@ -65,7 +65,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mirrors',
-        'USER': 'postgres',
+        'USER': 'root',
         'PASSWORD': 'dimatop12',
         'HOST': 'localhost',
         'PORT': '5432'
@@ -136,4 +136,6 @@ AUTH_USER_MODEL = 'web.UserModel'
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024
 
+MIKOND_TELEGRAM_BOT_TOKEN="7681718288:AAGmEHn7rRXJDkuPn4FULmPb1cM4dZ-nDQY" 
+MIKOND_TELEGRAM_CHAT_ID="2005608695"
 # LOGIN_URL = 'main:login'

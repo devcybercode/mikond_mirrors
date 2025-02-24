@@ -4,7 +4,7 @@ from .models import Contact
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['name', 'phone']
+        fields = ['name', 'phone', 'model']
         widgets = {
             'phone': forms.TextInput(attrs={
                 'placeholder': '+998 (__) ___ __ __',

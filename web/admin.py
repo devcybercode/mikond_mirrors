@@ -32,3 +32,4 @@ class MirrorsAdmin(admin.ModelAdmin):
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('name', 'phone', 'created_at')
     search_fields = ('name', 'phone')
+    readonly_fields = ('model',)
